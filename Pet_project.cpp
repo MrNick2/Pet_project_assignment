@@ -1,44 +1,58 @@
-// For input and output
 #include <iostream>
+#include <unistd.h>
 
-// So I don't have to write std everywhere
 using namespace std;
 
-class Countdown {     // The class
-  public:           // Access specifier
-    Countdown(int countdown_start) {     // Constructor
-      cout << "Hello World!";
-      countdown_number = countdown_number;
-    }
-
-    private:
-    int countdown_number;
-    void The_Countdown_Thing()
-    {
-        
+// Concrete display (SRP)
+class Console_Display{
+public:
+    void show(int value) {
+        cout << value << endl;
     }
 };
 
-int main()
-{
-    int countdown_start;
-
-    cout<<"--------------"<<endl;
-    cout<<"Timer program!"<<endl;
-    cout<<"--------------"<<endl;
-
-    cout<<"Give me the seconds that you want the countdown to start from: ";
-    cin>>countdown_start;
-
-    Countdown My_Countdown(countdown_start);
-
-    system("clear");
-
-    for (size_t i = countdown_start; i > 0; i--)
-    {
-        cout<<""
+// Concrete delay (SRP)
+class Real_Delay{
+public:
+    void waitOneSecond() {
+        sleep(1);
     }
-    
+};
+
+// Core countdown logic (SRP, DIP)
+class Countdown {
+private:
+    int start;
+    Console_Display* display;
+    Real_Delay* delay;
+
+public:
+    Countdown(int s, Console_Display* d, Real_Delay* del)
+        : start(s), display(d), delay(del) {}
+
+    void run() {
+        for (int i = start; i > 0; --i) {
+            display->show(i);
+            delay->waitOneSecond();
+        }
+    }
+};
+
+int main() {
+    int seconds;
+
+    cout << "--------------" << endl;
+    cout << "Timer program!" << endl;
+    cout << "--------------" << endl;
+
+    cout << "Give me the seconds: ";
+    cin >> seconds;
+
+    Console_Display display;
+    Real_Delay delay;
+
+    Countdown countdown(seconds, &display, &delay);
+    countdown.run();
 
     return 0;
 }
