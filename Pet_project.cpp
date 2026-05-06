@@ -1,9 +1,10 @@
+// For input-output
 #include <iostream>
+// For sleep
 #include <unistd.h>
 
 using namespace std;
 
-// Concrete display (SRP)
 class Console_Display{
 public:
     void show(int value) {
@@ -11,7 +12,6 @@ public:
     }
 };
 
-// Concrete delay (SRP)
 class Real_Delay{
 public:
     void waitOneSecond() {
@@ -19,7 +19,6 @@ public:
     }
 };
 
-// Core countdown logic (SRP, DIP)
 class Countdown {
 private:
     int start;
