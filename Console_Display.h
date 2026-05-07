@@ -2,9 +2,15 @@
 
 #include <iostream>
 
+/**
+ * @file Console_Display.h
+ * @brief The header for the cpp "Console_Display".
+ *
+ * It displays the seconds with its method "show".
+ */
 
 /**
- * This class displays the text. It has one function
+ * @brief This class displays the text. It has one method.
  */
 class Console_Display
 {

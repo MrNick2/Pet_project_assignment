@@ -1,6 +1,16 @@
 #include "Countdown.h"
 
-Countdown::Countdown(int s, Console_Display* d, Real_Delay* del)
+/**
+ * @file Countdown.cpp
+ * @brief The cpp file for the class "Countdown".
+ *
+ * It uses the two other classes in one class.
+ */
+
+/**
+ * @brief This is the constructor of the class.
+ */
+Countdown::Countdown(int s, Console_Display *d, Real_Delay *del)
     : start(s), display(d), delay(del)
 {
 }

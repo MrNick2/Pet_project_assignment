@@ -2,10 +2,13 @@
 
 #include <unistd.h>
 
-
 /**
- * This class is for delaying the show, with the help of the function "sleep".
+ * @file Real_Delay.h
+ * @brief The header for the cpp "Real_Delay".
+ *
+ * It contains the declaration of the public method "waitOneSecond".
  */
+
 class Real_Delay
 {
 public:
