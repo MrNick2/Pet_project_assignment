@@ -3,3 +3,9 @@ Runnable
 Doxyfile
 html/
 latex/
+cmake_install.cmake
+CMakeCache.txt
+CTestTestfile.cmake
+Makefile
+Pet
+Test_Pet
