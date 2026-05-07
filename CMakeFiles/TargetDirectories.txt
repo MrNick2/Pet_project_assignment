@@ -1,5 +1,0 @@
-/mnt/Seagate vegyes/----------------EGYETEM DOLGOK(MSC GYŐR)/Production Software Development/Beadandó/CMakeFiles/Pet.dir
-/mnt/Seagate vegyes/----------------EGYETEM DOLGOK(MSC GYŐR)/Production Software Development/Beadandó/CMakeFiles/Test_Pet.dir
-/mnt/Seagate vegyes/----------------EGYETEM DOLGOK(MSC GYŐR)/Production Software Development/Beadandó/CMakeFiles/test.dir
-/mnt/Seagate vegyes/----------------EGYETEM DOLGOK(MSC GYŐR)/Production Software Development/Beadandó/CMakeFiles/edit_cache.dir
-/mnt/Seagate vegyes/----------------EGYETEM DOLGOK(MSC GYŐR)/Production Software Development/Beadandó/CMakeFiles/rebuild_cache.dir
