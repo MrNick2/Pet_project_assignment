@@ -1,2 +1,5 @@
 build/
 Runnable
+Doxyfile
+html/
+latex/
